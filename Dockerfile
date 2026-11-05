@@ -1,10 +1,8 @@
 #FROM golang:1.22.2
-FROM docker.io/library/golang:1.23
+FROM golang:1.23
 
 #ARG CONSOLE_VERSION="latest"
-
-# Change @latest to a pinned stable release tag (v1.7.1)
-RUN go install github.com
+ARG CONSOLE_VERSION="v1.7.1"
 
 # Install MinIO Console
 RUN go install github.com/minio/console/cmd/console@${CONSOLE_VERSION}
