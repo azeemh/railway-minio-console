@@ -1,4 +1,6 @@
-FROM golang:1.22.2
+#FROM golang:1.22.2
+FROM docker.io/library/golang:1.23
+
 
 ARG CONSOLE_VERSION="latest"
 
